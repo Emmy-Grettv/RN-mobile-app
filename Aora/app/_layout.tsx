@@ -1,12 +1,10 @@
-import { Slot, Stack } from "expo-router"
-import { Text } from "react-native"
+import { Slot } from "expo-router";
+import { View, Text } from "react-native";
 
-const RootLayout = () => {
+export default function MainLayout() {
   return (
-   <Stack>
-     <Stack.Screen name="/profile" options={{ headerShown: false }} />
-   </Stack>
-  )
+    <View style={{ flex: 1 }}>
+      <Slot />
+    </View>
+  );
 }
-
-export default RootLayout;

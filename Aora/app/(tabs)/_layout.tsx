@@ -1,12 +1,11 @@
-import { Slot, Stack } from "expo-router"
-import { Text } from "react-native"
+import { Tabs } from "expo-router";
 
-const RootLayout = () => {
+export default function TabsLayout() {
   return (
-   <Stack>
-     <Stack.Screen name="/(tabs)/profile" options={{ headerShown: false }} />
-   </Stack>
-  )
+    <Tabs>
+      <Tabs.Screen name="index" options={{ title: 'Home' }} />
+      <Tabs.Screen name="explore" options={{ title: 'Explore' }} />
+      <Tabs.Screen name="profile" options={{ title: 'Profile' }} />
+    </Tabs>
+  );
 }
-
-export default RootLayout;

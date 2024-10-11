@@ -6,8 +6,8 @@ export default function HomeScreen() {
   return (
     <View>
       <Text>Aora👋🥳</Text>
-      <StatusBar style="auto" />
-      {/* Adjust the Link to navigate to the correct route */}
+      <StatusBar />
+      {/* Correct route to the profile screen */}
       <Link href="/(tabs)/profile">Go to Profile</Link> 
     </View>
   );
