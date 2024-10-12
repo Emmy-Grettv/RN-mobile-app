@@ -1,10 +1,13 @@
-import { Slot } from "expo-router";
-import { View, Text } from "react-native";
+import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
+import { useFonts } from 'expo-font';
+import { Stack } from 'expo-router';
 
-export default function MainLayout() {
+export default function RootLayout() {
+
   return (
-    <View style={{ flex: 1 }}>
-      <Slot />
-    </View>
+      <Stack>
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="+not-found" />
+      </Stack>
   );
 }

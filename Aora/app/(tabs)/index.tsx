@@ -1,14 +1,14 @@
-import { Link } from "expo-router";
-import { StatusBar } from "expo-status-bar";
-import { Text, View } from "react-native";
+import { Link } from '@react-navigation/native';
+import { Image, StyleSheet, Platform, View, Text } from 'react-native';
+import { tailwind } from 'react-native-tailwindcss';
 
 export default function HomeScreen() {
   return (
-    <View>
-      <Text>Aora👋🥳</Text>
-      <StatusBar />
-      {/* Correct route to the profile screen */}
-      <Link href="/(tabs)/profile">Go to Profile</Link> 
+    <View style={ tailwind.fontBold}>
+      <Text >Aora</Text>
+      <Link to="/profile">Go to profile</Link>
     </View>
   );
 }
+
+
